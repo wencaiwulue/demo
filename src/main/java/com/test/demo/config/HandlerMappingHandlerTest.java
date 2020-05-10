@@ -42,7 +42,13 @@ public class HandlerMappingHandlerTest extends AbstractHandlerMethodMapping<Requ
 
     @Override
     protected RequestMappingInfo getMatchingMapping(RequestMappingInfo mapping, HttpServletRequest request) {
-        return mapping;
+        Set<String> patterns = mapping.getPatternsCondition().getPatterns();
+        for (String pattern : patterns) {
+            if (pattern.equals(request.getServletPath())) {
+                return mapping;
+            }
+        }
+        return null;
     }
 
     @Override
