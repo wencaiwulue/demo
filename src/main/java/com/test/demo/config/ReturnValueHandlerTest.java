@@ -1,7 +1,7 @@
-package com.test.demo.filter;
+package com.test.demo.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.test.demo.config.RequestMappingTest;
+import com.test.demo.config.CmdPathTest;
 import com.test.demo.model.CResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.context.request.NativeWebRequest;
@@ -20,7 +20,7 @@ public class ReturnValueHandlerTest implements HandlerMethodReturnValueHandler {
 
     @Override
     public boolean supportsReturnType(MethodParameter returnType) {
-        RequestMappingTest annotation = returnType.getAnnotatedElement().getDeclaredAnnotation(RequestMappingTest.class);
+        CmdPathTest annotation = returnType.getAnnotatedElement().getDeclaredAnnotation(CmdPathTest.class);
         return annotation != null;
     }
 

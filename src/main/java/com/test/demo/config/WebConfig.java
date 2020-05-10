@@ -1,7 +1,6 @@
 package com.test.demo.config;
 
-import com.test.demo.filter.InterceptorTest;
-import com.test.demo.filter.ReturnValueHandlerTest;
+import com.test.demo.interceptor.InterceptorTest;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,14 +22,14 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Bean
     public HandlerMapping handlerMappingTest() {
-        HandlerMappingHandlerTest handlerTest = new HandlerMappingHandlerTest();
-        handlerTest.setInterceptors(new InterceptorTest());
+        HandlerMethodMappingTest handlerTest = new HandlerMethodMappingTest();
+        handlerTest.setInterceptors(new InterceptorTest());//注册到自定义的路由注解中
         return handlerTest;
     }
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new InterceptorTest());
+        registry.addInterceptor(new InterceptorTest());// 注册到spring默认的路由注解
     }
 
     @Override

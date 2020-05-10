@@ -13,10 +13,12 @@ import java.util.Comparator;
 import java.util.Set;
 
 /**
+ * 自定义路由注解处理器
+ *
  * @author naison
  * @since 3/6/2020 17:22
  */
-public class HandlerMappingHandlerTest extends AbstractHandlerMethodMapping<RequestMappingInfo> {
+public class HandlerMethodMappingTest extends AbstractHandlerMethodMapping<RequestMappingInfo> {
 
     @Override
     protected boolean isHandler(Class beanType) {
@@ -57,7 +59,7 @@ public class HandlerMappingHandlerTest extends AbstractHandlerMethodMapping<Requ
     }
 
     private RequestMappingInfo createRequestMappingInfo(AnnotatedElement element) {
-        RequestMappingTest annotation = AnnotatedElementUtils.findMergedAnnotation(element, RequestMappingTest.class);
+        CmdPathTest annotation = AnnotatedElementUtils.findMergedAnnotation(element, CmdPathTest.class);
         if (annotation == null) return null;
 
         RequestMappingInfo.Builder builder = RequestMappingInfo

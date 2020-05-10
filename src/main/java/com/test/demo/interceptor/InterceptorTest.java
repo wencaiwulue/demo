@@ -1,4 +1,4 @@
-package com.test.demo.filter;
+package com.test.demo.interceptor;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

@@ -20,7 +20,7 @@ public class CResponse<T> {
         this.data = data;
     }
 
-    public static <T> CResponse of(T data) {
+    public static <T> CResponse<T> of(T data) {
         return new CResponse<>(data);
     }
 

@@ -1,6 +1,6 @@
 package com.test.demo.controller;
 
-import com.test.demo.config.RequestMappingTest;
+import com.test.demo.config.CmdPathTest;
 import com.test.demo.model.A;
 import com.test.demo.model.B;
 import com.test.demo.model.CResponse;
@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @since 3/6/2020 18:57
  */
 @Controller
-@RequestMappingTest("/1")
+@CmdPathTest("/1")
 @RequestMapping("/2")
-public class ControllerMappingTest {
+public class ControllerTest {
 
-    @RequestMappingTest("/test1")
+    @CmdPathTest("/test1")
     @ResponseBody
     public Object test1(@ModelAttribute A a, @ModelAttribute B b) {
         System.out.println(a.getId());
@@ -26,14 +26,14 @@ public class ControllerMappingTest {
         return CResponse.of(true);
     }
 
-    @RequestMappingTest("/test2")
+    @CmdPathTest("/test2")
     public Object test2(@ModelAttribute A a, @ModelAttribute B b) {
         System.out.println(a.getId());
         System.out.println(b.getId());
         return true;
     }
 
-    @RequestMapping("/test5")
+    @RequestMapping("/test3")
     @ResponseBody
     public Object test(@ModelAttribute A a, @ModelAttribute B b) {
         System.out.println(a.getId());
