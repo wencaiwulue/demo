@@ -1,4 +1,4 @@
-package com.test.demo.config;
+package com.test.demo.core;
 
 import com.test.demo.interceptor.InterceptorTest;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;

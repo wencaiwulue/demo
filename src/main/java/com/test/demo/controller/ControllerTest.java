@@ -1,6 +1,6 @@
 package com.test.demo.controller;
 
-import com.test.demo.config.CmdPathTest;
+import com.test.demo.core.CmdPathTest;
 import com.test.demo.model.A;
 import com.test.demo.model.B;
 import com.test.demo.model.CResponse;

@@ -1,4 +1,4 @@
-package com.test.demo.config;
+package com.test.demo.core;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

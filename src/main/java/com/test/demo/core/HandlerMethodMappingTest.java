@@ -1,4 +1,4 @@
-package com.test.demo.config;
+package com.test.demo.core;
 
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.stereotype.Controller;

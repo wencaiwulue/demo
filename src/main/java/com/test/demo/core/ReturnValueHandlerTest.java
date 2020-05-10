@@ -1,7 +1,6 @@
-package com.test.demo.config;
+package com.test.demo.core;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.test.demo.config.CmdPathTest;
 import com.test.demo.model.CResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.context.request.NativeWebRequest;
